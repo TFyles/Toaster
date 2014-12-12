@@ -74,9 +74,9 @@ function dialogDismissed(buttonIndex) {
 
         }); 
 
-        notification.local.onclick = function(2){
+        window.plugin.notification.local.onclick = function(2){
             createDialog();
-        };
+        }
     }
     
 
