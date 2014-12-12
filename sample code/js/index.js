@@ -47,18 +47,20 @@ function createDialog() {
 function dialogDismissed(buttonIndex) {
 	
 	if(buttonIndex==1) new Toast({content: "Take a break and eat something", duration: 3000});
-    var currentTime = new Date().getTime(); //current time
-    var notificationTime = new Date(currentTime + 20000); //delayed time  - add 1 second
-
-    window.plugin.notification.local.add({ 
-        id:         1,
-        title:      "Go Back to work",
-        message:    "Go back to work",
-        date:       notificationTime, 
-        badge:      notification_count++
-    });
-
    	else if(buttonIndex==2) new Toast({content: 'Carry on working', duration: 3000});
+
+    if (buttonIndex==1){
+        var currentTime = new Date().getTime(); //current time
+        var notificationTime = new Date(currentTime + 20000); //delayed time  - add 1 second
+
+        window.plugin.notification.local.add({ 
+            id:         1,
+            title:      "Go Back to work",
+            message:    "Go back to work",
+            date:       notificationTime, 
+            badge:      notification_count++
+        });
+    }
 
 }
 
@@ -76,7 +78,7 @@ function createNotification() {
     //setup notification
     //
 	window.plugin.notification.local.add({ 
-    	id: 		1,
+    	id: 		2,
         title: 		"Hey you",
         message: 	"This is an example notification",
         date: 		notificationTime, 
