@@ -71,7 +71,7 @@ function dialogDismissed(buttonIndex) {
             message:    "Hungry yet?",
             date:       notificationTime, 
             badge:      notification_count++
-        }, createDialog();); 
+        }, createDialog()); 
     }
     
 
