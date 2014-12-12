@@ -66,17 +66,23 @@ function dialogDismissed(buttonIndex) {
         var notificationTime = new Date(currentTime + 10000); //delayed time  - add 1 second
 
         window.plugin.notification.local.add({ 
-            id:         1,
+            id:         2,
             title:      "",
             message:    "Hungry yet?",
             date:       notificationTime, 
             badge:      notification_count++
-            json: createDialog();
+
         }); 
+
+        notification.local.onclick = function(2){
+            createDialog();
+        };
     }
     
 
 }
+
+
 
    
    
