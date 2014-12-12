@@ -73,10 +73,6 @@ function dialogDismissed(buttonIndex) {
             badge:      notification_count++
 
         }); 
-
-        window.plugin.notification.local.onclick = function(2){
-            createDialog();
-        }
     }
     
 
