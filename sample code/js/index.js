@@ -55,12 +55,25 @@ function dialogDismissed(buttonIndex) {
 
         window.plugin.notification.local.add({ 
             id:         1,
-            // title:      "Go Back to work",
+            title:      "",
             message:    "Go back to work",
             date:       notificationTime, 
             badge:      notification_count++
         });
     }
+    if (buttonIndex==2){
+        var currentTime = new Date().getTime(); //current time
+        var notificationTime = new Date(currentTime + 10000); //delayed time  - add 1 second
+
+        window.plugin.notification.local.add({ 
+            id:         1,
+            title:      "",
+            message:    "Hungry yet?",
+            date:       notificationTime, 
+            badge:      notification_count++
+        }, createDialog();); 
+    }
+    
 
 }
 
