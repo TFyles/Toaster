@@ -55,7 +55,7 @@ function dialogDismissed(buttonIndex) {
 
         window.plugin.notification.local.add({ 
             id:         1,
-            title:      "Go Back to work",
+            // title:      "Go Back to work",
             message:    "Go back to work",
             date:       notificationTime, 
             badge:      notification_count++
